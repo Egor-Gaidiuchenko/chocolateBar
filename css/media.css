@@ -344,7 +344,7 @@
     }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
     .our-products > h1 {
         font-size: 98px;
     }
@@ -377,6 +377,9 @@
 }
 
 @media screen and (max-width: 500px) {
+    .our-products > h1 {
+        font-size: 70px;
+    }
     .price {
         margin-left: 0;
     }
