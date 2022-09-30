@@ -225,11 +225,14 @@ body {
     margin-right: 150px;
 }
 
-.home-slider > h1 {
+.slider-next,
+.slider-previous {
     font-size: 36px;
     line-height: 42px;
     color: #fff;
     margin: 0 auto;
+    user-select: none;
+    cursor: pointer;
 }
 
 .slider-nav {
