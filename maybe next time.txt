@@ -1,0 +1,4 @@
+cart/shop now/buy now modal
+sending email to server by subscribe now/footer
+creating our products from database
+more our products button
