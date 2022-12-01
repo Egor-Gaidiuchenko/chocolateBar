@@ -102,66 +102,66 @@ window.addEventListener('scroll', () => {
 
 // slider
 
-const homeImg = document.querySelector('.home > img'),
-      sliderNext = document.querySelector('.slider-next'),
-      sliderPrevious = document.querySelector('.slider-previous'),
-      sliderNav = document.querySelectorAll('.slider-nav');
+// const homeImg = document.querySelector('.home > img'),
+//       sliderNext = document.querySelector('.slider-next'),
+//       sliderPrevious = document.querySelector('.slider-previous'),
+//       sliderNav = document.querySelectorAll('.slider-nav');
 
-let i = 0;
+// let i = 0;
 
-fetch('http://localhost:3000/slider')
-    .then(data => data.json())
-    .then(res => homeImg.setAttribute('src', res[i]));
+// fetch('http://localhost:3000/slider')
+//     .then(data => data.json())
+//     .then(res => homeImg.setAttribute('src', res[i]));
 
-sliderNav[i].classList.add('slider-active');
+// sliderNav[i].classList.add('slider-active');
 
-function sliderNavigation () {
-    sliderNext.addEventListener('click', () => {
-        i = ++i;
+// function sliderNavigation () {
+//     sliderNext.addEventListener('click', () => {
+//         i = ++i;
 
-        fetch('http://localhost:3000/slider')
-            .then(data => data.json())
-            .then(res => {
-                if (i < res.length) {
-                    homeImg.setAttribute('src', res[i]);
-                    sliderNav.forEach(i => {
-                        i.classList.remove('slider-active');
-                    });
-                    sliderNav[i].classList.add('slider-active');
-                } else {
-                    i = 0;
-                    homeImg.setAttribute('src', res[i]);
-                    sliderNav.forEach(i => {
-                        i.classList.remove('slider-active');
-                    });
-                    sliderNav[i].classList.add('slider-active');
-                }
-            });
-    });
+//         fetch('http://localhost:3000/slider')
+//             .then(data => data.json())
+//             .then(res => {
+//                 if (i < res.length) {
+//                     homeImg.setAttribute('src', res[i]);
+//                     sliderNav.forEach(i => {
+//                         i.classList.remove('slider-active');
+//                     });
+//                     sliderNav[i].classList.add('slider-active');
+//                 } else {
+//                     i = 0;
+//                     homeImg.setAttribute('src', res[i]);
+//                     sliderNav.forEach(i => {
+//                         i.classList.remove('slider-active');
+//                     });
+//                     sliderNav[i].classList.add('slider-active');
+//                 }
+//             });
+//     });
 
-    sliderPrevious.addEventListener('click', () => {
-        i = --i;
+//     sliderPrevious.addEventListener('click', () => {
+//         i = --i;
 
-        fetch('http://localhost:3000/slider')
-            .then(data => data.json())
-            .then(res => {
-                if (i < 0) {
-                    i = res.length - 1;
+//         fetch('http://localhost:3000/slider')
+//             .then(data => data.json())
+//             .then(res => {
+//                 if (i < 0) {
+//                     i = res.length - 1;
 
-                    homeImg.setAttribute('src', res[i]);
-                    sliderNav.forEach(i => {
-                        i.classList.remove('slider-active');
-                    });
-                    sliderNav[i].classList.add('slider-active');
-                } else {
-                    homeImg.setAttribute('src', res[i]);
-                    sliderNav.forEach(i => {
-                        i.classList.remove('slider-active');
-                    });
-                    sliderNav[i].classList.add('slider-active');
-                }
-            });
-    });
-}
+//                     homeImg.setAttribute('src', res[i]);
+//                     sliderNav.forEach(i => {
+//                         i.classList.remove('slider-active');
+//                     });
+//                     sliderNav[i].classList.add('slider-active');
+//                 } else {
+//                     homeImg.setAttribute('src', res[i]);
+//                     sliderNav.forEach(i => {
+//                         i.classList.remove('slider-active');
+//                     });
+//                     sliderNav[i].classList.add('slider-active');
+//                 }
+//             });
+//     });
+// }
 
-sliderNext.addEventListener('click', sliderNavigation());
+// sliderNext.addEventListener('click', sliderNavigation());
