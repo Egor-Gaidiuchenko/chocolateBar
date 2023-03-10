@@ -1,4 +1,3 @@
 # chocolateBar
 
-Grid markup
-Form styling
+This is my first try on grid markup. Also here I made styling for inputs using tag label
